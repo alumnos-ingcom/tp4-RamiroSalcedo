@@ -24,9 +24,11 @@ def compara(numero, otro_numero):
     
     
 def prueba():
-    retorno = compara(5, 5)
+    numero = int(input("ingrese primer numero a comparar "))
+    otro_numero = int(input("ingrese segundo numero a comparar "))
+    retorno = compara(numero, otro_numero)
     print(retorno)
-    pass
+    
 
 if __name__ == "__main__":
     prueba()

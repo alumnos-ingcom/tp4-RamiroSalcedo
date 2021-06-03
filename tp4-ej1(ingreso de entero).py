@@ -8,9 +8,9 @@ class IngresoIncorrecto(Exception):
          
         pass
 
-def recibir_entero():
+def ingreso_entero(mensaje):
     
-    numero = (input("Ingrese un numero:"))
+    numero = (input(mensaje + ":"))
     try:
                                                             
         entero = int(numero)
@@ -24,10 +24,11 @@ def recibir_entero():
     return entero
 
             
-def prueba():         
-    valor = recibir_entero()
+def prueba():
+    mensaje = ("ingrese un numero entero")
+    valor = ingreso_entero(mensaje)
     print(valor)
-    pass
+    
 
 if __name__ == "__main__":
       prueba()

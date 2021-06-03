@@ -7,18 +7,27 @@
 def signo(numero):
     
     if numero > 0:
-        print(f"El Numero {numero} es positivo")
+        
+        
+        signo = '+'
         
     elif numero < 0:
-        print(f"El Numero {numero} es negativo")
+        
+        
+        signo = '-'
         
     else:
-        print(f"El Numero es {numero}")
         
+        
+        signo = 'neutro'
+        
+    return signo
 
 def prueba():
-    signo(-3)
-    pass
+    numero = int(input("Ingrese numero que quiera evaluar "))
+    resultado = signo(numero)
+    print(resultado)
+    
 
 if __name__ == "__main__":
     prueba()

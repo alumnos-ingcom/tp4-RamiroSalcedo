@@ -8,12 +8,12 @@ class IngresoIncorrecto(Exception):
     """Esta es la Excepcion para el ingreso incorrecto"""
     pass 
 
-def ingreso_entero_reintento():
+def ingreso_entero_reintento(mensaje, cantidad_intentos):
       
     try:
-        for i in range(1):
+        for i in range(cantidad_intentos):
             
-            numero = (input(f"Ingrese un numero: "))
+            numero = (input(mensaje + ": "))
             entero = int(numero)
 
                    
@@ -26,9 +26,13 @@ def ingreso_entero_reintento():
 
 
 def prueba():
-    valor = ingreso_entero_reintento()
+    
+    mensaje = ("ingrese un numero")
+    cantidad_intentos = int(input("Cuantas veces quiere que se repita?"))
+    valor = ingreso_entero_reintento(mensaje, cantidad_intentos)
+    
     print(valor)
-    pass
+    
 
 if __name__ == "__main__":
     prueba()

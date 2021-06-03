@@ -8,10 +8,10 @@ class IngresoIncorrecto(Exception):
     """Esta es la Excepcion para el ingreso incorrecto"""
     pass 
 
-def recibir_entero_definido(valormax, valormin):
+def ingreso_entero_restringido(mensaje, valormax=10, valormin=0):
     
     """valores maximos definidos"""
-    numero = (input(f"Ingrese un numero entre {valormin} y {valormax}: "))
+    numero = (input(mensaje + ": "))
     
     maximo = valormax
     minimo = valormin
@@ -20,11 +20,10 @@ def recibir_entero_definido(valormax, valormin):
     try:
         entero = int(numero)
         """Evalua que las condiciones se cumplan"""
-        
-        if entero >= maximo:
-            print("error su numero excede el valor maximo admitido")
-        elif entero <= minimo:
-            print("error su numero excede el valor minimo admitido")
+        if entero > maximo:
+            raise IngresoIncorrecto("Error se ha excedido del valor maximo")
+        elif entero < minimo:
+            raise IngresoIncorrecto("Error se ha excedido del valor minimo")
          
     except ValueError as err:
         """excepcion levantada"""
@@ -34,10 +33,11 @@ def recibir_entero_definido(valormax, valormin):
 
 
 def prueba():
-     
-    minumero = recibir_entero_definido(100, 50)
+    
+    mensaje = (f"ingrese un numero entre 0 y 10")
+    minumero = ingreso_entero_restringido(mensaje)
     print(minumero)
-    pass
+    
 
 if __name__ == "__main__":
     prueba()
