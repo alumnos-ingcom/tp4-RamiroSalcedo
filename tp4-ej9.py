@@ -24,9 +24,10 @@ def es_primo(numero):
 
 
 def prueba():
-    prueba = es_primo(3)
+    numero = int(input("ingrese que numero quiere evaluar: "))
+    prueba = es_primo(numero)
     print(prueba)
-    pass
+    
         
 if __name__ == "__main__":
     prueba()

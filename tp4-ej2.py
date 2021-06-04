@@ -21,7 +21,7 @@ def suma_lenta(numero, otro_numero):
             contador = contador + 1
             
             
-    else:
+    elif numero <= otro_numero:
         
         contador = numero
         

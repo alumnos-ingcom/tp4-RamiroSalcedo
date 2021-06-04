@@ -15,16 +15,17 @@ def division_lenta(dividendo, divisor):
         cociente = cociente + 1
         
         
-    print(f"El cociente es: {cociente}")
-    print(f"El resto es: {dividendo}") 
-    return dividendo, cociente
+
+    return cociente, dividendo
 
 
 
 def prueba():
-    
-    division_lenta(55, 3)
-    pass
+    numero = float(input("ingrese dividendo "))
+    otro_numero = float(input("ingrese divisor "))
+    cociente = division_lenta(numero, otro_numero)
+    print(f"El cociente y el resto son: {cociente}")
+
 
 if __name__ == "__main__":
     prueba()
