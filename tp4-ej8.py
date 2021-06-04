@@ -36,10 +36,8 @@ def ordenar_mayor_a_menor(uno, dos, tres):
                     
                 else:
                     t = ( tres, uno, dos)
-
-    return t
                     
-
+    print(t)
     
 
 def ordenar_menor_a_mayor(uno, dos, tres):
@@ -78,7 +76,7 @@ def ordenar_menor_a_mayor(uno, dos, tres):
                     t = (tres, dos, uno)
                     
                         
-    return t                     
+    print(t)                     
 
 
 
@@ -86,14 +84,9 @@ def ordenar_menor_a_mayor(uno, dos, tres):
 
 
 def prueba():
-    num1 = int(input("Ingrese primer numero: "))
-    num2 = int(input("Ingrese segundo numero: "))
-    num3 = int(input("Ingrese tercer numero: "))
-    menor_amayor = ordenar_menor_a_mayor(num1, num2, num3)
-    print(menor_amayor)
-    mayor_amenor = ordenar_mayor_a_menor(num1, num2, num3)
-    print(mayor_amenor)
-     
+    ordenar_menor_a_mayor(3444, 4, 65)
+    ordenar_mayor_a_menor(2, 32, 1)
+    pass
 
 if __name__ == "__main__":
     prueba()
