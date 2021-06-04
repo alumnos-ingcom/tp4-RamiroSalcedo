@@ -23,8 +23,9 @@ def division_lenta(dividendo, divisor):
 def prueba():
     numero = float(input("ingrese dividendo "))
     otro_numero = float(input("ingrese divisor "))
-    cociente = division_lenta(numero, otro_numero)
-    print(f"El cociente y el resto son: {cociente}")
+    cociente, resto = division_lenta(numero, otro_numero)
+    print(f"El cociente: {cociente}")
+    print(f"El resto es: {resto}")
 
 
 if __name__ == "__main__":
