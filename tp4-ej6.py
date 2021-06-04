@@ -57,7 +57,7 @@ def prueba():
     
     minimo(3)
     maximo(3)
-    pass
+    
 
 
 if __name__ == "__main__":
