@@ -4,60 +4,77 @@
 # UNRN Andina - Introducción a la Ingenieria en Computación
 ################
 
-def minimo(lista):
+def lista(cantidad_numeros):
     
     lst = []
     
-    contador = 9999999999999
-    
-    for i in range(lista):
+
+    for i in range(cantidad_numeros):
         
         valor = int(input("Ingrese valor: "))
         
         lst.append(valor)
+
+
+    return lst
+    
+
+def minimo(argumentolista, cantidad_numeros):
+    
+    
+    
+    
+    
+    contador = 99999999999
+    
+    for i in range(cantidad_numeros):
+              
+        valor = argumentolista[i]   
         
-        
-        if contador > valor:
+        if valor < contador:
             
-            menor = valor
-            contador = menor
+            
+            vminimo = valor
+            contador = valor
     
     
-    print(f"El menor es {menor}")
     
-    return menor
+    
+    return vminimo
 
 
-def maximo(lista):
+def maximo(argumentolista, cantidad_numeros):
     
-    lst = []
+    
+    
     
     contador = -999999999999
     
-    for i in range(lista):
+    for i in range(cantidad_numeros):
         
-        valor = int(input("Ingrese valor: "))
+        valor = argumentolista[i] 
         
-        lst.append(valor)
-        
-        
-        if contador < valor:
+        if valor > contador:
             
-            maximo = valor
-            contador = maximo
+            vmaximo = valor
+            contador = valor
     
     
-    print(f"El maximo es {maximo}")
     
-    return maximo
+    
+    return vmaximo
 
 
 
 def prueba():
     
-    minimo(3)
-    maximo(3)
+    cantidad_numeros = int(input("ingrese cuantos valores quiere cargar en la lista: "))
+    listita = lista(cantidad_numeros)
     
+    min_n = minimo(listita, cantidad_numeros)
+    print(f"El minimo es {min_n}")
+    max_n = maximo(listita, cantidad_numeros)
+    print(f"El maximo es {max_n}")
 
 
 if __name__ == "__main__":

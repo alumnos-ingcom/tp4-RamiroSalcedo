@@ -6,22 +6,20 @@
 
 def es_primo(numero):
     
-    resto = numero % 2
     
- 
-    evalua = resto != 0
-    
-    if evalua:
-        """si evalua es true es un numero primo"""
+    if numero % 1 == 0:
         
-    else:
-        """si evalua es false no es un numero primo"""
-        
-    return evalua
-    """retorna true o false"""
-
-
-
+        if numero % numero == 0:
+            
+            if numero % 2 == 0:
+                
+                return False
+            
+            else:
+                
+                return True
+                
+            
 
 def prueba():
     numero = int(input("ingrese que numero quiere evaluar: "))
